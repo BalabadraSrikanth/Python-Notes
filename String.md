@@ -449,7 +449,7 @@ print(words.swapcase())                     #'pYTHON' 'iS' 'a' 'pOWERFUL' 'lANGU
 
 ### startswith() 
 
-he startswith() method returns True if the string starts with the specified value, otherwise False.
+the startswith() method returns True if the string starts with the specified value, otherwise False.
 
 **Syntax**
 
@@ -463,16 +463,115 @@ print(words.startswith("P", 10, 20))                     #True
 
 
 
-### startswith() 
+### endsswith() 
 
-he startswith() method returns True if the string starts with the specified value, otherwise False.
+the endswith() method returns True if the string ending with the specified value, otherwise False.
 
 **Syntax**
 
-     VAriable.startswith(string)
+     VAriable.endswith(string)
 **Exmaple**
 ```python
 words ="'Python' 'Is' 'A' 'Powerful' 'Language'"
-print(words.startswith("P"))                     #True
+print(words.endswith("e"))                     #True
 ```
 ---
+---
+
+## Formating String
+
+String formatting allows you to create dynamic strings by combining variables and values
+
+There are five different ways to perform string formatting in Python
+
+⏩Formatting with % Operator.                                                      
+⏩Formatting with format() string method.                                          
+⏩Formatting with string literals, called f-strings.                                          
+⏩Formatting with String Template Class                                                
+⏩Formatting with center() string method.                                                
+
+
+###⏩Formatting with % Operator                                      
+It is the oldest method of string formatting. Here we use the modulo % operator. The modulo % is also known as the “string-formatting operator”.
+
+**Exmaple1**
+
+    print("The mangy, scrawny stray dog %s gobbled down" %'hurriedly' + 
+          "the grain-free, organic dog food.")      
+**OutPut**
+
+      The mangy, scrawny stray dog hurriedly gobbled downthe grain-free, organic dog food.
+      
+**Exmaple2**
+
+    variable = 12 
+    string = "Variable as integer = %d \n\
+    Variable as float = %f" %(variable, variable)
+    print (string)
+**OutPut**
+
+    Variable as integer = 12
+    Variable as float = 12.000"
+
+###⏩Formatting with format() string method.
+
+Formatters work by putting in one or more replacement fields and placeholders defined by a pair of curly braces { } into a string and calling the str.format(). The value we wish to put into the placeholders and concatenate with the string passed as parameters into the format function. 
+**Example**
+
+    print('We all are {}.'.format('equal'))    
+**OutPut**
+    
+    # WE are equal
+
+###⏩Formatting with string literals, called f-strings.                                          
+
+ the f-string f"My name is {name}." is used to interpolate the value of the name variable into the string.
+
+**Example**
+
+    name = 'Ele'
+    print(f"My name is {name}.")
+**Output**
+    
+    My name is Ele
+
+**Example**
+
+    print(f"He said his age is {(lambda x: x*2)(3)}")
+**OutPut**
+
+    He said his age is 6
+
+###⏩Formatting with String Template Class                                                
+
+This code imports the Template class from the string module. The Template class allows us to create a template string with placeholders that can be substituted with actual values. Here we are substituting the values n1 and n2 in place of n3 and n4 in the string n.
+
+**Example**
+
+    from string import Template
+
+    n1 = 'Hello'
+    n2 = 'GeeksforGeeks'
+    n = Template('$n3 ! This is $n4.')
+    print(n.substitute(n3=n1, n4=n2))
+
+**OutPut**
+
+    Hello ! This is GreeksforGreeks
+
+###⏩Formatting with center() string method.                                                
+
+The center() method is a built-in method in Python's str class that returns a new string that is centered within a string of a specified width. 
+
+**Example**
+
+    string = "GeeksForGeeks!"
+    width = 30
+    centered_string = string.center(width,"_")
+    print(centered_string)
+
+**OutPut**
+
+    ________GeeksForGeeks!________
+
+    
